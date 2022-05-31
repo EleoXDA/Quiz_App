@@ -19,18 +19,18 @@ class QuizApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(title: const Text('My App')),
             body: Column(children: [
-              Text('The questions'),
+              Text(questions.elementAt(0)),
               RaisedButton(
                 child: Text('Answer1'),
                 onPressed: answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer2'),
-                onPressed: answerQuestion,
+                onPressed: () => print('Answer2 chosen'),
               ),
               RaisedButton(
                 child: Text('Answer3'),
-                onPressed: answerQuestion,
+                onPressed: () => print('Answer3 chosen!'),
               )
             ])));
   } // build
