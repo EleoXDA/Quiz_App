@@ -5,8 +5,11 @@ void main() {
 }
 
 class QuizApp extends StatelessWidget {
+  var questionIndex = 0;
+
   void answerQuestion() {
-    print('Answer Chosen!');
+    questionIndex = questionIndex + 1;
+    print(questionIndex);
   }
 
   @override
@@ -19,7 +22,7 @@ class QuizApp extends StatelessWidget {
         home: Scaffold(
             appBar: AppBar(title: const Text('My App')),
             body: Column(children: [
-              Text(questions.elementAt(0)),
+              Text(questions[questionIndex]),
               RaisedButton(
                 child: Text('Answer1'),
                 onPressed: answerQuestion,
