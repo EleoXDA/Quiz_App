@@ -4,7 +4,15 @@ void main() {
   runApp(QuizApp());
 }
 
-class QuizApp extends StatelessWidget {
+class QuizApp extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return QuizAppState();
+  }
+}
+
+class QuizAppState extends State<QuizApp> {
   var questionIndex = 0;
 
   void answerQuestion() {
