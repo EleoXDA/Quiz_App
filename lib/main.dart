@@ -9,9 +9,10 @@ class QuizApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Text('My Quiz App'),
+        appBar: AppBar(title: const Text('My App')),
+        body: const Text('My Quiz App'),
       ), // Scaffold
     ); // MaterialApp
   } // build
