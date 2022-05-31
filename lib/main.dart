@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const QuizApp());
+  runApp(QuizApp());
 }
 
 class QuizApp extends StatelessWidget {
-  const QuizApp({Key? key}) : super(key: key);
+  void answerQuestion() {
+    print('Answer Chosen!');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -16,20 +18,20 @@ class QuizApp extends StatelessWidget {
     return MaterialApp(
         home: Scaffold(
             appBar: AppBar(title: const Text('My App')),
-            body: Column(children: const [
+            body: Column(children: [
               Text('The questions'),
               RaisedButton(
                 child: Text('Answer1'),
-                onPressed: null,
+                onPressed: answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer2'),
-                onPressed: null,
+                onPressed: answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer3'),
-                onPressed: null,
+                onPressed: answerQuestion,
               )
-            ]))); // MaterialApp
+            ])));
   } // build
 } // QuizApp
