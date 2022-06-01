@@ -15,13 +15,13 @@ class QuizApp extends StatefulWidget {
 }
 
 class _QuizAppState extends State<QuizApp> {
-  var questionIndex = 0;
+  var _questionIndex = 0;
 
-  void answerQuestion() {
+  void _answerQuestion() {
     setState(() {
-      questionIndex = questionIndex + 1;
+      _questionIndex = _questionIndex + 1;
     });
-    print(questionIndex);
+    print(_questionIndex);
   }
 
   @override
@@ -34,10 +34,10 @@ class _QuizAppState extends State<QuizApp> {
         home: Scaffold(
             appBar: AppBar(title: const Text('My App')),
             body: Column(children: [
-              Text(questions[questionIndex]),
+              Text(questions[_questionIndex]),
               RaisedButton(
                 child: Text('Answer1'),
-                onPressed: answerQuestion,
+                onPressed: _answerQuestion,
               ),
               RaisedButton(
                 child: Text('Answer2'),
