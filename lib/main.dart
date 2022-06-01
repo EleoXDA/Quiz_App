@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(QuizApp());
-}
+//void main() {
+//  runApp(QuizApp());
+//}
+//a shorter was of saying this, is:
+void main() => runApp(QuizApp());
 
 class QuizApp extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
     // TODO: implement createState
-    return QuizAppState();
+    return _QuizAppState();
   }
 }
 
-class QuizAppState extends State<QuizApp> {
+class _QuizAppState extends State<QuizApp> {
   var questionIndex = 0;
 
   void answerQuestion() {
